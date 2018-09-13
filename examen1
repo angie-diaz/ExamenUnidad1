@@ -1,9 +1,3 @@
-for(num<-Range(1,10)){
-if(num%2==0){
-println($"num primo")
-}else{
-println($"num impar")
-}}
 
  //1. par o no es par-------------------------------
 
@@ -31,45 +25,42 @@ for(a <- list){
   }
 }
 
-//3. suma
+//3. siete afortunado----------------
 
-println(" Afortunado")
+println("Afortunado")
 val premiado = List(7,7)
-def afortunado (seven: List[Int]): Int={
-  var sumando = 0
-  for (n <- premiado){
+
+def afortunado (premiado: List[Int]): Int={
+  var sumar = 0
+  for (n<-premiado){
     if(n == 7){
       sumar += n*2
     }else {
       sumar += n
-    }}
+    }
+    }
   return sumar}
 println(afortunado(premiado))
-println("")
-readLine
 
-
-//4.
+//4.equilibrar--------------------------------------------
 println("4 - Bal")
-val lis1 = List(5,1,4,2)
-def list2 (balanceo: List[Int]): Boolean={
+val list = List(7,3,4)
+def list2 (balance: List[Int]): Boolean={
   val (a,b) = balance.splitAt(balance.length/2)
-  if (a.sum == b.sum){ return true }
+  if (a.sum == b.sum){
+  return true }
   else return false
 }
-println(balance(list1))
-println("")
-readLine
+println(list2(list))
 
-//5
 
-def palindromo(a:String): Boolean = a match {
-  case s
-  if a.length > 1 => (a.head == a.last) && palindromo(a.slice(1, a.length-1))
-  case x => true
-}
-println()
-var pal1 = readLine
-print("palabra")
-palindromo(pal1)
-println()
+//5---------------------------------------
+def palindromo(lectura:String):Boolean={
+    return (lectura==lectura.reverse)
+  }
+
+  var lectura = "angelica"
+  print("lectura")
+
+  var lectura="111"
+  print("lectura")
