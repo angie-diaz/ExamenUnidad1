@@ -5,13 +5,15 @@ println($"num primo")
 println($"num impar")
 }}
 
- //1. par o no es par
+ //1. par o no es par-------------------------------
+
 for(num <- Range(0,10)){
 if(num%2 == 0){
-println(s"$num is par")
-}else{ println(s"$num is no es par")}}
+println(s"$num  par")
+}else{ println(s"$num  no es par")}}
 
-//2.funcion que devuelva true o false
+//2.funcion que devuelva true o false----------------------
+
 def primo(num:Int): Boolean={
 for(n<-Range(2,num)){
 if(num%n == 0){
@@ -20,8 +22,54 @@ return false
 return true
 }
 
-//3. suma
-val list = List(1,7,7)
-list.sum
+val list = List(1,4,5,9,10,11,15)
+var a = 0
+for(a <- list){
+  if (a <= a) {
+    print("num " + a + " es: ")
+    println(primo(a))
+  }
+}
 
-//4. 
+//3. suma
+
+println(" Afortunado")
+val premiado = List(7,7)
+def afortunado (seven: List[Int]): Int={
+  var sumando = 0
+  for (n <- premiado){
+    if(n == 7){
+      sumar += n*2
+    }else {
+      sumar += n
+    }}
+  return sumar}
+println(afortunado(premiado))
+println("")
+readLine
+
+
+//4.
+println("4 - Bal")
+val lis1 = List(5,1,4,2)
+def list2 (balanceo: List[Int]): Boolean={
+  val (a,b) = balance.splitAt(balance.length/2)
+  if (a.sum == b.sum){ return true }
+  else return false
+}
+println(balance(list1))
+println("")
+readLine
+
+//5
+
+def palindromo(a:String): Boolean = a match {
+  case s
+  if a.length > 1 => (a.head == a.last) && palindromo(a.slice(1, a.length-1))
+  case x => true
+}
+println()
+var pal1 = readLine
+print("palabra")
+palindromo(pal1)
+println()
